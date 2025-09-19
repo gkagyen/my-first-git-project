@@ -18,3 +18,7 @@ ggplot(data=penguins, aes(
   labs(x='Bill depth', y='Bill length',
        title = "Penguins scatter plot") +
   theme_classic()
+
+# add regression model
+lm_model <- lm(bill_dep ~ bill_len, data = penguins)
+summary(lm_model)
